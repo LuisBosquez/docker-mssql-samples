@@ -1,0 +1,8 @@
+FROM microsoft/dotnet:latest
+
+RUN mkdir ~/aspnetcore
+WORKDIR ~/aspnetcore
+
+ADD ./code/ ./
+RUN dotnet restore
+RUN dotnet run

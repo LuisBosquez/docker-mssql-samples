@@ -4,6 +4,8 @@ services:
     web:
         build: .
         command: dotnet run
+        ports: 
+            - "5000:5000"
         links:
             - db
         depends_on:

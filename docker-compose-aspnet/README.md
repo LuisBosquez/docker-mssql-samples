@@ -88,6 +88,8 @@ For this project, you will need a few code files, a Dockerfile and a docker-comp
     }
     ```
 
+    In this code, an attempt to connect to SQL Server running in Docker is made with retry logic. 
+
 1. Create a new Dockerfile in your working directory.
 
     This file will define the steps necessary to create the continerized ASP.NET application. Once it is built, it can be run as a container.
@@ -142,6 +144,6 @@ For this project, you will need a few code files, a Dockerfile and a docker-comp
 
 1. Run the `docker-compose build` command.
 
-1. Run the `docker-compose up` command.
+1. Run the `docker-compose up` command. After a few seconds, you should be able to see a connection attempt and the message "Successfully connected to SQL Server in Docker.".
 
 Ready! You now have a .NET Core application running against SQL Server in Docker!
