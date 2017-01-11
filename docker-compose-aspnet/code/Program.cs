@@ -12,7 +12,7 @@ namespace SqlServerSample
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
             builder.DataSource = "db";   // update me
             builder.UserID = "sa";              // update me
-            builder.Password = "Luis9000";      // update me
+            builder.Password = "your_password";      // update me
             builder.InitialCatalog = "master";
 
             bool connected = false;
