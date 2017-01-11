@@ -33,7 +33,7 @@ For this sample, we will use [Yeoman](http://yeoman.io/) to generate a sample `d
 1. Navigate into the `webapp` directory that the previous command just generated. 
     Voilá! There's already a `Dockerfile` automatically generated for you to test this web application. We will modify this `Dockerfile` and some of the automatically generated code to interact with the SQL Server image in a few.
 
-1. Create a `docker-compose.yml` file. This will define the way the images will interact as micro-services. Write the following in the file, and make sure to replace the password in the `SA_PASSWORD` environment variable under `db` below:
+1. Create a `docker-compose.yml` file. This will define the way the images will interact as micro-services. Write the following in the file, and make sure to replace the password in the `SA_PASSWORD` environment variable under `db` below. SQL Server requires a secure password (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
 
     ```
     version: '2'
