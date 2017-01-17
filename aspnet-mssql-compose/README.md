@@ -46,7 +46,7 @@ For this sample, we will use [Yeoman](http://yeoman.io/) to generate a sample `d
 
 1. Create a `docker-compose.yml` file. Write the following in the file, and make sure to replace the password in the `SA_PASSWORD` environment variable under `db` below. This file will define the way the images will interact as micro-services. 
 
-    **Note:** SQL Server requires a secure password (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
+    >**Note**: SQL Server requires a secure password (Minimum length 8 characters, including uppercase and lowercase letters, base 10 digits and/or non-alphanumeric symbols).
 
     ```
     version: '2'
@@ -73,7 +73,7 @@ For this sample, we will use [Yeoman](http://yeoman.io/) to generate a sample `d
 
 1. Go to `Startup.cs` and locate the function called `ConfigureServices` (Hint: it should be under line 42). Replace the entire function to use the following code (watch out for the brackets!).
 
-    **Note:** Make sure to update the `Password` field in the `connection` variable below to the one you defined in the `docker-compose.yml` file.
+    >**Note**: Make sure to update the `Password` field in the `connection` variable below to the one you defined in the `docker-compose.yml` file.
 
     ```csharp
     [...]
@@ -125,7 +125,7 @@ For this sample, we will use [Yeoman](http://yeoman.io/) to generate a sample `d
 
 1. The previous `Dockerfile` makes use of an entrypoint to your webapp Docker image. Create this script in a file called `entrypoint.sh` and paste the contents below.
 
-    **Note:** Make sure to use UNIX line delimiters. The script won't work if you use Windows-based delimiters (Carriage return and line feed).
+    >**Note**: Make sure to use UNIX line delimiters. The script won't work if you use Windows-based delimiters (Carriage return and line feed).
 
     ```bash
     #!/bin/bash
@@ -159,3 +159,9 @@ For this sample, we will use [Yeoman](http://yeoman.io/) to generate a sample `d
     Go ahead and try out the website! This entire sample will use the SQL Server database image that is also running in Docker.
 
 Ready! You now have a ASP.NET Core application running against SQL Server in Docker Compose!
+
+## Further reading
+
+- [Build your app using SQL Server](https://www.microsoft.com/en-us/sql-server/developer-get-started/?utm_medium=Referral&utm_source=docs.docker.com)
+- [SQL Server on DockerHub](https://hub.docker.com/r/microsoft/mssql-server-linux/)
+- [ASP.NET Core](https://www.asp.net/core)

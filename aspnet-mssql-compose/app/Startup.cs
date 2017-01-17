@@ -39,7 +39,7 @@ namespace completewebapp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var connection = @"Server=db;Database=master;User=sa;Password=your_password;";
+            var connection = @"Server=db;Database=master;User=sa;Password=Luis9000;";
             
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connection));
 
