@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:latest
+FROM microsoft/aspnetcore-build:latest
 
 COPY . /app
 
@@ -8,7 +8,7 @@ RUN ["dotnet", "restore"]
 
 RUN ["dotnet", "build"]
 
-EXPOSE 5000/tcp
+EXPOSE 80/tcp
 
 RUN chmod +x ./entrypoint.sh
 
