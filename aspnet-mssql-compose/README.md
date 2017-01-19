@@ -6,7 +6,7 @@ title: "Quickstart: Compose and ASP.NET Core with SQL Server"
 
 This quick-start guide demonstrates how to use Docker Compose to set up and run the sample ASP.NET Core application using the [ASP.NET Core Build image](https://hub.docker.com/r/microsoft/aspnetcore-build/) with the [SQL Server on Linux image](https://hub.docker.com/r/microsoft/mssql-server-linux/).
 
-For this sample, we will use [Yeoman](http://yeoman.io/) to generate a sample `dotnet core web application`. After that, we will configure this app to use our `SQL Server database` and then create a `docker-compose.yml` that will define the behavior of all of these components.
+For this sample, we will use [Yeoman](http://yeoman.io/) to generate a sample `dotnet core web application`. After that, we will configure this app to use our `SQL Server database` and then create a `docker-compose.yml` that will define the behavior of all of these components. You just need to have [Docker Engine](https://docs.docker.com/engine/installation/) and [Docker Compose](https://docs.docker.com/compose/install/) installed on your platform of choice.
 
 # Pre-requisite: Install yeoman and the asp-net generator.
 
