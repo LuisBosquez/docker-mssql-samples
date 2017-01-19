@@ -6,7 +6,7 @@ title: "Quickstart: Compose and ASP.NET Core with SQL Server"
 
 This quick-start guide demonstrates how to use Docker Compose to set up and run the sample ASP.NET Core application using the [ASP.NET Core Build image](https://hub.docker.com/r/microsoft/aspnetcore-build/) with the [SQL Server on Linux image](https://hub.docker.com/r/microsoft/mssql-server-linux/).
 
-For this sample, we will use [Yeoman](http://yeoman.io/) to generate a sample `dot net core web application`. After that, we will configure this app to use our `SQL Server database` and then create a `docker-compose.yml` that will define the behavior of all of these components.
+For this sample, we will use [Yeoman](http://yeoman.io/) to generate a sample `dotnet core web application`. After that, we will configure this app to use our `SQL Server database` and then create a `docker-compose.yml` that will define the behavior of all of these components.
 
 # Pre-requisite: Install yeoman and the asp-net generator.
 
@@ -28,7 +28,7 @@ For this sample, we will use [Yeoman](http://yeoman.io/) to generate a sample `d
 
 1. Create an empty directory and navigate into it.
 
-    This directory will be the context of you docker-compose project. It should only contain the resources necessary to build it.
+    This directory will be the context of your docker-compose project. It should only contain the resources necessary to build it.
 
 1. Within your directory, use `Yeoman` to generate a sample web application:
 
@@ -42,7 +42,7 @@ For this sample, we will use [Yeoman](http://yeoman.io/) to generate a sample `d
 
 1. Navigate into the `webapp` directory that the previous command just generated. 
 
-    Voilá! There's already a `Dockerfile` that was automatically generated for you. We will adapt this `Dockerfile` and some of the automatically generated code to connect to the SQL Server database in a few.
+    Voilá! There's already a `Dockerfile` that was automatically generated for you. In the next few steps we will adapt this project to connect to the SQL Server database.
 
 1. Create a `docker-compose.yml` file. Write the following in the file, and make sure to replace the password in the `SA_PASSWORD` environment variable under `db` below. This file will define the way the images will interact as micro-services. 
 
