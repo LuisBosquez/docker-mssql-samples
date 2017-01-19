@@ -4,7 +4,7 @@ keywords: docker, dockerize, dockerizing, dotnet, .NET, Core, article, example, 
 title: "Quickstart: Compose and ASP.NET Core with SQL Server"
 ---
 
-This quick-start guide demonstrates how to use Docker Compose to set up and run the sample ASP.NET Core application using the [Dot Net Core image](https://hub.docker.com/r/microsoft/dotnet/) with the [SQL Server on Linux image](https://hub.docker.com/r/microsoft/mssql-server-linux/).
+This quick-start guide demonstrates how to use Docker Compose to set up and run the sample ASP.NET Core application using the [ASP.NET Core Build image](https://hub.docker.com/r/microsoft/aspnetcore-build/) with the [SQL Server on Linux image](https://hub.docker.com/r/microsoft/mssql-server-linux/).
 
 For this sample, we will use [Yeoman](http://yeoman.io/) to generate a sample `dot net core web application`. After that, we will configure this app to use our `SQL Server database` and then create a `docker-compose.yml` that will define the behavior of all of these components.
 
@@ -119,7 +119,7 @@ For this sample, we will use [Yeoman](http://yeoman.io/) to generate a sample `d
     CMD /bin/bash ./entrypoint.sh
     ```
 
-    This file defines how to build the web app image. It will use the [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) base image, copy the generated code, restore the dependencies, build the project and expose port 5000. After that, it will call an `entrypoint script` that we will create in the next step. 
+    This file defines how to build the web app image. It will use the [microsoft/aspnetcore-build](https://hub.docker.com/r/microsoft/aspnetcore-build/) base image, copy the generated code, restore the dependencies, build the project and expose port 80. After that, it will call an `entrypoint script` that we will create in the next step. 
 
 1. The previous `Dockerfile` makes use of an entrypoint to your webapp Docker image. Create this script in a file called `entrypoint.sh` and paste the contents below.
 
@@ -148,7 +148,7 @@ For this sample, we will use [Yeoman](http://yeoman.io/) to generate a sample `d
     docker-compose build
     ```
 
-1. Run the `docker-compose up` command. After a few seconds, you should be able to open [http://localhost:5000](http://localhost:5000) and see the landing ASP.NET core sample website. 
+1. Run the `docker-compose up` command. After a few seconds, you should be able to open [http://localhost:8000](http://localhost:8000) and see the landing ASP.NET core sample website. The application is listening on port 80 by default, but we mapped it to port 8000 in the `Dockerfile`.
 
     ```bash
     docker-compose up
@@ -163,3 +163,4 @@ Ready! You now have a ASP.NET Core application running against SQL Server in Doc
 - [Build your app using SQL Server](https://www.microsoft.com/en-us/sql-server/developer-get-started/?utm_medium=Referral&utm_source=docs.docker.com)
 - [SQL Server on DockerHub](https://hub.docker.com/r/microsoft/mssql-server-linux/)
 - [ASP.NET Core](https://www.asp.net/core)
+- [ASP.NET Core Docker image](https://hub.docker.com/r/microsoft/aspnetcore/) on DockerHub
