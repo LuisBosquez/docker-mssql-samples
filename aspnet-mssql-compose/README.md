@@ -55,9 +55,7 @@ For this sample, we will use [Yeoman](http://yeoman.io/) to generate a sample `d
         web:
             build: .
             ports: 
-                - "5000:5000"
-            links:
-                - db
+                - "8000:80"
             depends_on:
                 - db
         db:
@@ -104,7 +102,7 @@ For this sample, we will use [Yeoman](http://yeoman.io/) to generate a sample `d
 1. Now replace the entire `Dockerfile` to the following content:
 
     ```
-    FROM microsoft/dotnet:latest
+    FROM microsoft/aspnetcore-build:latest
 
     COPY . /app
 
@@ -114,7 +112,7 @@ For this sample, we will use [Yeoman](http://yeoman.io/) to generate a sample `d
 
     RUN ["dotnet", "build"]
 
-    EXPOSE 5000/tcp
+    EXPOSE 80/tcp
 
     RUN chmod +x ./entrypoint.sh
 
